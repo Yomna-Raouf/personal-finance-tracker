@@ -27,8 +27,26 @@ export default defineConfigWithVueTs(
 
   {
     rules: {
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+
+          varsIgnorePattern: '^_',
+        },
+      ],
       'no-console': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+
+          varsIgnorePattern: '^_',
+        },
+      ],
+      'vue/multi-word-component-names': 'warn',
     },
   },
 
